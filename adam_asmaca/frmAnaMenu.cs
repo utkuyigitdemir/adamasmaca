@@ -23,9 +23,6 @@ namespace adam_asmaca
 
         Form sehirler2 = new frmSehirler();
 
-   
-
-
 
         private void lblKapat_MouseEnter(object sender, EventArgs e)
         {
@@ -72,6 +69,10 @@ namespace adam_asmaca
             {
                 Globals.glblKategori = "ulkeler";
             }
+            else if (chkTDK.Checked == true)
+            {
+                Globals.glblKategori = "tdk";
+            }
             //
             sehirler2.Show();
             this.Hide();
@@ -110,11 +111,27 @@ namespace adam_asmaca
 
         }
 
+        private void chkTDK_MouseEnter(object sender, EventArgs e)
+        {
+            chkTDK.ForeColor = Color.Red;
+            this.Cursor = Cursors.Hand;
+
+
+        }
+
+        private void chkTDK_MouseLeave(object sender, EventArgs e)
+        {
+            chkTDK.ForeColor = Color.Black;
+            this.Cursor = Cursors.Arrow;
+
+        }
+
         private void chkUlkeler_Click(object sender, EventArgs e)
         {
             lblOyunuBaslat.Enabled = true;
             chkKentler.Checked = false;
-            if (chkUlkeler.Checked == false&& chkKentler.Checked==false)
+            chkTDK.Checked = false;
+            if (chkUlkeler.Checked == false && chkKentler.Checked == false && chkTDK.Checked == false)
             {
                 lblOyunuBaslat.Enabled = false;
 
@@ -125,15 +142,23 @@ namespace adam_asmaca
         {
             lblOyunuBaslat.Enabled = true;
             chkUlkeler.Checked = false;
-            if (chkUlkeler.Checked == false && chkKentler.Checked == false)
+            chkTDK.Checked = false;
+            if (chkUlkeler.Checked == false && chkKentler.Checked == false && chkTDK.Checked == false)
             {
                 lblOyunuBaslat.Enabled = false;
             }
         }
 
-         
-
-
+        private void chkTDK_Click(object sender, EventArgs e)
+        {
+            lblOyunuBaslat.Enabled = true;
+            chkUlkeler.Checked = false;
+            chkKentler.Checked = false;
+            if (chkUlkeler.Checked == false && chkKentler.Checked == false && chkTDK.Checked == false)
+            {
+                lblOyunuBaslat.Enabled = false;
+            }
+        }
 
         private void lblOyunuBaslat_MouseDown(object sender, MouseEventArgs e)
         {
@@ -157,6 +182,18 @@ namespace adam_asmaca
         {
             
             chkKentler.ForeColor = Color.Red;
+        }
+
+        private void chkTDK_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            chkTDK.ForeColor = Color.DarkRed;
+        }
+
+        private void chkTDK_MouseUp(object sender, MouseEventArgs e)
+        {
+
+            chkTDK.ForeColor = Color.Red;
         }
 
         private void chkUlkeler_MouseDown(object sender, MouseEventArgs e)

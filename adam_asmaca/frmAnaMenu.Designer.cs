@@ -35,6 +35,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.chkKentler = new System.Windows.Forms.CheckBox();
             this.chkUlkeler = new System.Windows.Forms.CheckBox();
+            this.chkTDK = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -131,6 +132,23 @@
             this.chkUlkeler.MouseLeave += new System.EventHandler(this.chkUlkeler_MouseLeave);
             this.chkUlkeler.MouseUp += new System.Windows.Forms.MouseEventHandler(this.chkUlkeler_MouseUp);
             // 
+            // chkTDK
+            // 
+            this.chkTDK.AutoSize = true;
+            this.chkTDK.BackColor = System.Drawing.Color.Transparent;
+            this.chkTDK.Font = new System.Drawing.Font("Freestyle Script", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chkTDK.Location = new System.Drawing.Point(644, 225);
+            this.chkTDK.Name = "chkTDK";
+            this.chkTDK.Size = new System.Drawing.Size(69, 36);
+            this.chkTDK.TabIndex = 7;
+            this.chkTDK.Text = "TDK";
+            this.chkTDK.UseVisualStyleBackColor = false;
+            this.chkTDK.Click += new System.EventHandler(this.chkTDK_Click);
+            this.chkTDK.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chkTDK_MouseDown);
+            this.chkTDK.MouseEnter += new System.EventHandler(this.chkTDK_MouseEnter);
+            this.chkTDK.MouseLeave += new System.EventHandler(this.chkTDK_MouseLeave);
+            this.chkTDK.MouseUp += new System.Windows.Forms.MouseEventHandler(this.chkTDK_MouseUp);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -162,6 +180,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.chkUlkeler);
             this.Controls.Add(this.chkKentler);
+            this.Controls.Add(this.chkTDK);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lblKapat);
             this.Controls.Add(this.label2);
@@ -186,6 +205,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chkKentler;
         private System.Windows.Forms.CheckBox chkUlkeler;
+        private System.Windows.Forms.CheckBox chkTDK;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox8;
     }

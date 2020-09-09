@@ -469,7 +469,10 @@ namespace adam_asmaca
                 sehirlist.Add("CEZAYİR");
                 lblKategori.Text = "Ülkeler";
             }
-            
+            else if (Globals.glblKategori == "tdk")
+            {
+
+            }
             Atama();
         }
 
