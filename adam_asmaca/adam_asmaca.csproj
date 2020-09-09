@@ -76,6 +76,7 @@
       <DependentUpon>frmSehirler.cs</DependentUpon>
     </Compile>
     <Compile Include="TDK.cs" />
+    <Compile Include="words.cs" />
     <EmbeddedResource Include="frmAnaMenu.resx">
       <DependentUpon>frmAnaMenu.cs</DependentUpon>
     </EmbeddedResource>
@@ -97,7 +98,6 @@
     <EmbeddedResource Include="frmSehirler.resx">
       <DependentUpon>frmSehirler.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="words.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

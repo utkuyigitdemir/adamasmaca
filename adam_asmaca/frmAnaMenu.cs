@@ -71,7 +71,7 @@ namespace adam_asmaca
             }
             else if (chkTDK.Checked == true)
             {
-                Globals.glblKategori = "tdk";
+                Globals.glblKategori = "english";
             }
             //
             sehirler2.Show();

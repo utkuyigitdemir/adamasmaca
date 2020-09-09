@@ -141,7 +141,7 @@
             this.chkTDK.Name = "chkTDK";
             this.chkTDK.Size = new System.Drawing.Size(69, 36);
             this.chkTDK.TabIndex = 7;
-            this.chkTDK.Text = "TDK";
+            this.chkTDK.Text = "English";
             this.chkTDK.UseVisualStyleBackColor = false;
             this.chkTDK.Click += new System.EventHandler(this.chkTDK_Click);
             this.chkTDK.MouseDown += new System.Windows.Forms.MouseEventHandler(this.chkTDK_MouseDown);

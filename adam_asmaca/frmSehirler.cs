@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace adam_asmaca
 {
@@ -324,7 +326,7 @@ namespace adam_asmaca
 
 
             Random sehirrand = new Random();
-            randsehir = sehirrand.Next(0, kalansehir);
+            randsehir = sehirrand.Next(0, sehirlist.Count);
             if (kalansehir != 0)
             {
                 gelensehir = sehirlist[randsehir];
@@ -398,9 +400,42 @@ namespace adam_asmaca
                 pictureBox6.Hide();
                 pictureBox5.Hide();
                 ressayi = 5;
-
-                
-
+            }
+            else if (gelensehir.Length == 4)
+            {
+                pictureBox0.Show();
+                pictureBox1.Show();
+                pictureBox2.Show();
+                pictureBox3.Show();
+                pictureBox4.Hide();
+                pictureBox7.Hide();
+                pictureBox6.Hide();
+                pictureBox5.Hide();
+                ressayi = 4;
+            }
+            else if (gelensehir.Length == 3)
+            {
+                pictureBox0.Show();
+                pictureBox1.Show();
+                pictureBox2.Show();
+                pictureBox3.Hide();
+                pictureBox4.Hide();
+                pictureBox7.Hide();
+                pictureBox6.Hide();
+                pictureBox5.Hide();
+                ressayi = 3;
+            }
+            else if (gelensehir.Length == 2)
+            {
+                pictureBox0.Show();
+                pictureBox1.Show();
+                pictureBox2.Hide();
+                pictureBox3.Hide();
+                pictureBox4.Hide();
+                pictureBox7.Hide();
+                pictureBox6.Hide();
+                pictureBox5.Hide();
+                ressayi = 2;
             }
         }
 
@@ -469,9 +504,14 @@ namespace adam_asmaca
                 sehirlist.Add("CEZAYİR");
                 lblKategori.Text = "Ülkeler";
             }
-            else if (Globals.glblKategori == "tdk")
+            else if (Globals.glblKategori == "english")
             {
+                Words words = JsonConvert.DeserializeObject<Words>(File.ReadAllText("words.json"));
 
+                foreach (var w in words.Data)
+                {
+                    sehirlist.Add(w.Word.Value.ToUpperInvariant());
+                }
             }
             Atama();
         }
